@@ -1,10 +1,95 @@
 /* WHOLE PAGE / BODY */
+@font-face {
+  font-family: "Quicksand";
+  src: url(/assets/Quicksand-VariableFont_wght.ttf);
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+/* BUTTONS */
+
+/* All Buttons */
+.buttonMain {
+  width: 14rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #AD62E6;
+  border-color: #BF83EC;
+  border-width: 4px;
+  border-radius: 2rem;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  color: #fff;
+  text-shadow: -1px -1px 0px #CF8DFF, 1px 1px 0px #724E8C;
+}
+
+.buttonMain:active {
+  background-color: #964fcc;
+  border-color: #AD62E6;
+  border-width: 6px;
+  border-radius: 2rem;
+
+  color: #e2d1f0;
+  text-shadow: -1px -1px 0px #724E8C, 1px 1px 0px #CF8DFF;
+}
+
+/* Coins */
+.coinMain {
+  width: 3rem;
+  height: 3rem;
+
+  border-width: 4px;
+  border-radius: 50%;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#goldCoin {
+  color: #c47f51;
+  background-color: #f3c665;
+  border-color: #ffeb8f;
+  border-bottom-color: #FFAB24;
+  border-right-color: #FFAB24;
+  text-shadow: 2px 2px 0px #ffeb8f;
+}
+
+#platCoin {
+  color: #859eb3;
+  background-color: #d1e3f3;
+  border-color: #e4f4ff;
+  border-bottom-color: #c6dbec;
+  border-right-color: #c6dbec;
+  text-shadow: 2px 2px 0px #f1f9ff;
+}
+
+#platButton:active {
+  color: #728da3;
+  background-color: #bcd3e7;
+  border-color: #e0f1ff;
+  border-top-color: #c6e3fa;
+  border-left-color: #c6e3fa;
+  text-shadow: 2px 2px 0px #d7eeff;
+}
+
+
+
+
+
+
 
 body {
   margin: 0;
-  font-family: 'Poppins', 'Tahoma', 'sans-serif';
+  font-family: 'Quicksand', 'sans-serif';
+  font-size: 16px;
 }
 
 /* HEADER */
@@ -30,6 +115,26 @@ main {
 section {
   height: 100vh;
 }
+
+
+
+
+.outputNum {
+          /* border for testing */
+        /*  */border-style: solid;
+        /*  */border-width: 2px;
+        /*  */border-color:green;
+        /*  */
+  width: 100px;
+  height: 100px;
+}
+
+
+
+
+
+
+
 
 /* FOOTER */
 footer {

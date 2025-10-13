@@ -1,62 +1,61 @@
-<!-- Clean base template for classwork -->
-
+<!-- Doc Setup -->
 <!DOCTYPE html>
 <html lang="en">
-  <!-- head = information for the browser -->
   <head>
-    <title>Home</title>
-    <link rel="icon" type="image/png" href="/assets/curly-bracket.png" />
+    <title>Alien Realestate</title>
+    <link href="code.png" rel="icon" type="img/png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    
+    <!-- External Files -->
     <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
+    <script defer src="script.js"></script>
   </head>
 
-  <!-- body = information for the website -->
   <body>
-    <header>
-      <!-- logo, company name, navigation, theme switch, search field, SoMe -->
 
-      <img src="/assets/bracket-curly.png" alt="Brackets icon" />
-
+    <!-- Header -->
+    <header class="flex">
+      <img onclick="menuToggle()" class="navIcon" src="/assets/ufogradient.png" alt="Navigation menu button" />
       <nav>
-        <ul>
-          <li>
-            <a href="#">Item</a>
-          </li>
-
-          <li>
-            <a href="#">Item</a>
-          </li>
-
-          <li>
-            <a href="#">Item</a>
-          </li>
+        <ul class="flex headerNavList navHover">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#planets">Planets</a></li>
+          <li><a href="index.html">About</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <!-- Main page content: introduction, products, etc -->
+    <!-- Main Body -->
+    <section class="flex mainPage">
 
-      <section id="">
-        <!-- HERO / Main, Home, Intro, First Impression - Mostly called hero set an id property to be able to anchor link to an element -->
-        <h1>Hero</h1>
-      </section>
+      <!-- Gold to Plat -->
+      <form name="goldToPlat" class="goldToPlat">
 
-      <!-- Additional Sections to the Hero -->
-      <section id="">
-        <h2>Section Addon</h2>
-      </section>
+        <label for="goldInput" class="formLabel">
 
-      <section id="">
-        <h2>Section Addon</h2>
-      </section>
-    </main>
+          <input type="number" name="goldInput" id="goldInput" class="inputNum" placeholder="Enter amount"/>
 
+          <p id="platOutput" class="outputNum">Output goes here</p>
+        </label>
+      </form>
+
+
+    </section>
+
+    <!-- Testing -->
+    <section class="testZone">
+      <button id="convertButton" class="buttonMain">Test Button</button>
+
+      <button id="goldCoin" class="coinMain">G</button>
+
+      <button id="platCoin" class="coinMain">P</button>
+    </section>
+
+    <!-- Footer -->
     <footer>
-      <!-- logo, navigation, cedits, TOS, other extra or important information, contact, SoMe -->
-      <h3>Footer text</h3>
+
     </footer>
   </body>
 </html>
+
