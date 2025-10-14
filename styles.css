@@ -5,6 +5,42 @@
 }
 
 
+/* FORM ELEMENTS */
+
+.numberBox {
+  height: 3rem;
+  min-width: 15rem;
+  width:min-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  border-style: inset;
+  border-width: 4px;
+  border-radius: 2rem;
+
+  font-family: 'Quicksand', 'sans-serif';
+  font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.inputNum {
+  
+}
+
+.outputNum {
+  display: flex;
+  align-items: center;
+}
+
+.equals {
+  font-size: 3rem;
+}
+
 
 
 /* BUTTONS */
@@ -45,6 +81,11 @@
   width: 3rem;
   height: 3rem;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-style: outset;
   border-width: 4px;
   border-radius: 50%;
 
@@ -119,15 +160,7 @@ section {
 
 
 
-.outputNum {
-          /* border for testing */
-        /*  */border-style: solid;
-        /*  */border-width: 2px;
-        /*  */border-color:green;
-        /*  */
-  width: 100px;
-  height: 100px;
-}
+
 
 
 
