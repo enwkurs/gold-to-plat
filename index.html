@@ -30,17 +30,22 @@
     <section class="flex mainPage">
 
       <!-- Gold to Plat -->
+      Element: Form, Name: goldToPlat
       <form name="goldToPlat" class="goldToPlat">
-
+        
         <label for="goldInput" class="formLabel">
-
-          <div class="container"><div id="goldCoin" class="coinMain">G</div><input type="number" name="goldInput" id="goldInput" class="numberBox inputNum" placeholder="Enter amount"/></div>
+          Element: Label, Name: goldInput
+          <!-- Trying out a method chaning input type from number to text -->
+          <div class="container"><div id="goldCoin" class="coinMain">G</div><input type="text" name="goldInput" id="goldInput" class="numberBox inputNum" placeholder="Enter amount"/></div>
+          <p>Element: Text Input, Name: goldInput</p>
           
           <div id="easyGold" class="numberBox easyGold"></div>
+          <p>Element: Div, Name: easyGold</p>
 
           <p class="equals">=</p>
 
           <div class="container"><div id="platCoin" class="coinMain">P</div><div id="platOutput" class="numberBox outputNum">Output goes here</div></div>
+          Element: Div, Name: platOutput
         </label>
       </form>
 

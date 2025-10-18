@@ -4,9 +4,12 @@ function easyNum(num) {
     if (num >= 1e12) return (num / 1e12).toFixed(1).replace(/\.0$/, '') + 'T gold';
     if (num >= 1e9)  return (num / 1e9).toFixed(1).replace(/\.0$/, '') + 'B gold';
     if (num >= 1e6)  return (num / 1e6).toFixed(1).replace(/\.0$/, '') + 'M gold';
-    if (num >= 1e3)  return (num / 1e3).toFixed(1).replace(/\.0$/, '') + 'K gold';
+    if (num >= (1e3))  return (num / 1e3).toFixed(1).replace(/\.0$/, '') + 'K gold';
     return num.toString();
 }
+// To fix this I think I need to maybe tell the num >= part of it to look for groups of \d{3} instead of a number value
+// BUT HOW?
+// I LIED - 
 
 const goldInput = document.querySelector("#goldInput");
 const easyGold = document.querySelector("#easyGold");
@@ -15,6 +18,15 @@ console.log(`[Found] ${goldInput} ${platOutput} ${easyGold}`);
 
 function goldToPlat() {
     console.log("Typing happened");
+
+    // Format number in the input box to be more readable
+    goldInput.oninput = function() {
+        let goldCommas = goldInput.value.replace(/\D/g, ''); // Search the input value for \D ( non digits ) in the whole thing ( g ) and replace them with ( '' ) aka delete
+        if (goldCommas.length > 3) {
+            goldCommas = goldCommas.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+        }
+        goldInput.value = goldCommas;
+    };
 
     const goldValue = Number(goldInput.value);
     console.log(`Const goldValue Number = ${goldValue}`);
