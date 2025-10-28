@@ -1,21 +1,32 @@
 // Convert Gold to Plat --------------------------------------------
 
-function easyNum(num) {
-    if (num >= 1e12) return (num / 1e12).toFixed(1).replace(/\.0$/, '') + 'T gold';
-    if (num >= 1e9)  return (num / 1e9).toFixed(1).replace(/\.0$/, '') + 'B gold';
-    if (num >= 1e6)  return (num / 1e6).toFixed(1).replace(/\.0$/, '') + 'M gold';
-    if (num >= (1e3))  return (num / 1e3).toFixed(1).replace(/\.0$/, '') + 'K gold';
-    return num.toString();
-}
+
+// num = placeholder for whatever number value will be received by the script
+// parseFloat() turns number-like text into a real number you can use in calculations.
+// function easyNum(num) {
+//     num = parseFloat(num.toString().replace(/,/g, ""));
+//     if (num >= 1e12) return (num / 1e12).toFixed(1).replace(/\.0$/, '') + 'T gold';
+//     if (num >= 1e9)  return (num / 1e9).toFixed(1).replace(/\.0$/, '') + 'B gold';
+//     if (num >= 1e6)  return (num / 1e6).toFixed(1).replace(/\.0$/, '') + 'M gold';
+//     if (num >= (1e3))  return (num / 1e3).toFixed(1).replace(/\.0$/, '') + 'K gold';
+//     return num.toString();
+// }
 // To fix this I think I need to maybe tell the num >= part of it to look for groups of \d{3} instead of a number value
 // BUT HOW?
 // I LIED - 
 
+/*
+REMEMBER:
+/ ... / = Regular Expression or regex
+*/
+
+// Get HTML elements
 const goldInput = document.querySelector("#goldInput");
 const easyGold = document.querySelector("#easyGold");
 const platOutput = document.querySelector("#platOutput");
 console.log(`[Found] ${goldInput} ${platOutput} ${easyGold}`);
 
+// Tell elements how to function
 function goldToPlat() {
     console.log("Typing happened");
 
@@ -28,10 +39,23 @@ function goldToPlat() {
         goldInput.value = goldCommas;
     };
 
-    const goldValue = Number(goldInput.value);
-    console.log(`Const goldValue Number = ${goldValue}`);
+    // num = placeholder for whatever number value will be received by the script
+    // parseFloat() turns number-like text into a real number you can use in calculations.
+    let easyNum = function(num) {
 
-    easyGold.textContent = easyNum(goldValue);
+        num = parseFloat(num.toString().replace(/,/g, ""));
+        if (num >= 1e12) return (num / 1e12).toFixed(1).replace(/\.0$/, '') + 'T gold';
+        if (num >= 1e9)  return (num / 1e9).toFixed(1).replace(/\.0$/, '') + 'B gold';
+        if (num >= 1e6)  return (num / 1e6).toFixed(1).replace(/\.0$/, '') + 'M gold';
+        if (num >= 1e3)  return (num / 1e3).toFixed(1).replace(/\.0$/, '') + 'K gold';
+        return num.toString();
+    }
+
+    easyGold.textContent = easyNum(goldInput.value); // GIANT BRAIN FIGURED OUT THE RIGHT VALUE TO POINT TO.
+    // Point to goldValue.input to have it function with the raw input number before formatting happens with commas
+
+    const goldValue = Number(goldInput.value.replace(/,/g, "")); // Have to remove commas here
+    console.log(`Const goldValue Number = ${goldValue}`);
 
     const platValue = goldValue / 10000000;
     console.log(`plat Value is ${platValue}`);
@@ -41,13 +65,8 @@ function goldToPlat() {
     } else {
         platOutput.textContent = "";
     }
-
     
 }
-
-
-
-
 
 
 goldInput.addEventListener("input", goldToPlat);
