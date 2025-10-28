@@ -42,8 +42,8 @@ function goldToPlat() {
     // num = placeholder for whatever number value will be received by the script
     // parseFloat() turns number-like text into a real number you can use in calculations.
     let easyNum = function(num) {
-
         num = parseFloat(num.toString().replace(/,/g, ""));
+        if (isNaN(num)) return "";
         if (num >= 1e12) return (num / 1e12).toFixed(1).replace(/\.0$/, '') + 'T gold';
         if (num >= 1e9)  return (num / 1e9).toFixed(1).replace(/\.0$/, '') + 'B gold';
         if (num >= 1e6)  return (num / 1e6).toFixed(1).replace(/\.0$/, '') + 'M gold';
