@@ -4,13 +4,38 @@
   src: url(/assets/Quicksand-VariableFont_wght.ttf);
 }
 
+/* ----- Get rid of ALL padding and margins ----- */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* ----- Begone useless spaces I did not ask for ----- */
+
+body {
+  font-family: 'Quicksand', 'sans-serif';
+  font-size: 16px;
+}
+
+.flex {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
 
 /* FORM ELEMENTS */
+
+.goldToPlat {
+  display: flex;
+  flex-direction: row;
+}
 
 .numberBox {
   height: 3rem;
   min-width: 15rem;
-  width:min-content;
+  width: min-content;
   padding-left: 1rem;
   padding-right: 1rem;
 
@@ -20,25 +45,53 @@
 
   font-family: 'Quicksand', 'sans-serif';
   font-size: 1.5rem;
+
+          /* border for testing */
+        /*  */border-style: solid;
+        /*  */border-width: 2px;
+        /*  */border-color:green;
+        /*  */
 }
 
 .container {
-  display: flex;
+
   align-items: center;
   gap: 2rem;
+
+          /* border for testing */
+        /*  */border-style: solid;
+        /*  */border-width: 2px;
+        /*  */border-color:green;
+        /*  */
 }
 
 .inputNum {
-  
+          /* border for testing */
+        /*  */border-style: solid;
+        /*  */border-width: 2px;
+        /*  */border-color:green;
+        /*  */
 }
 
 .outputNum {
   display: flex;
   align-items: center;
+
+          /* border for testing */
+        /*  */border-style: solid;
+        /*  */border-width: 2px;
+        /*  */border-color:green;
+        /*  */
 }
 
 .equals {
   font-size: 3rem;
+
+          /* border for testing */
+        /*  */border-style: solid;
+        /*  */border-width: 2px;
+        /*  */border-color:green;
+        /*  */
 }
 
 
@@ -127,19 +180,12 @@
 
 
 
-body {
-  margin: 0;
-  font-family: 'Quicksand', 'sans-serif';
-  font-size: 16px;
-}
+
 
 /* HEADER */
 header {
   background-color: blueviolet;
   padding: 10px 15px; /* TOP/BOTTOMpx RIGHT/LEFTpc - OR - TOP RIGHT BOTTOM LEFT ( Clockwise ) */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 ul {
@@ -150,12 +196,7 @@ ul {
 }
 
 /* MAIN */
-main {
-}
 
-section {
-  height: 100vh;
-}
 
 
 

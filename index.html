@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Alien Realestate</title>
+    <title>Currency Converter</title>
     <link href="code.png" rel="icon" type="img/png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -27,25 +27,27 @@
     </header>
 
     <!-- Main Body -->
-    <section class="flex mainPage">
+    <section class="main">
 
       <!-- Gold to Plat -->
-      Element: Form, Name: goldToPlat
       <form name="goldToPlat" class="goldToPlat">
         
+        <!-- Input form - Type in Gold, output Plat amount -->
         <label for="goldInput" class="formLabel">
-          Element: Label, Name: goldInput
-          <!-- Trying out a method chaning input type from number to text -->
-          <div class="container"><div id="goldCoin" class="coinMain">G</div><input type="text" name="goldInput" id="goldInput" class="numberBox inputNum" placeholder="Enter amount"/></div>
-          <p>Element: Text Input, Name: goldInput</p>
-          
+
+
+          <!-- Gold Input -->
+          <div class="flex container"><div id="goldCoin" class="coinMain">G</div><input type="text" name="goldInput" id="goldInput" class="numberBox inputNum" placeholder="Enter amount"/></div>
+
+          <!-- Abbreviated Gold Amount -->
           <div id="easyGold" class="numberBox easyGold"></div>
-          <p>Element: Div, Name: easyGold</p>
+
 
           <p class="equals">=</p>
 
-          <div class="container"><div id="platCoin" class="coinMain">P</div><div id="platOutput" class="numberBox outputNum">Output goes here</div></div>
-          Element: Div, Name: platOutput
+          <!-- Plat Output -->
+          <div class="flex container"><div id="platCoin" class="coinMain">P</div><div id="platOutput" class="numberBox outputNum">Output goes here</div></div>
+
         </label>
       </form>
 
@@ -53,13 +55,13 @@
     </section>
 
     <!-- Testing -->
-    <section class="testZone">
+    <!-- <section class="testZone">
       <button id="convertButton" class="buttonMain">Test Button</button>
 
       <button id="goldCoin" class="coinMain">G</button>
 
       <button id="platCoin" class="coinMain">P</button>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer>
